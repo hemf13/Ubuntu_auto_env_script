@@ -8,11 +8,11 @@ echo y|sudo apt install zsh
 chsh -s /bin/zsh
 echo y|sudo apt install net-tools
 
-#安装 curl git vim net-tools cmake gcc wget
+#安装 curl git vim net-tools cmake gcc wget htop nload
 #需要添加安装包在后面加入即可
 
 # for packet in {'curl','git','vim','net-tools','cmake','gcc'}
-# do
+# do 
 echo y|sudo apt install curl
 echo y|sudo apt install git
 echo y|sudo apt install vim
@@ -21,6 +21,7 @@ echo y|sudo apt install cmake
 echo y|sudo apt install gcc
 echo y|sudo apt install wget
 echo y|sudo apt install htop
+echo y|sudo apt install nload
 
 #判断是否需要proxy
 read -p "Do you need to set proxy? y/n " proxy_flag
@@ -34,7 +35,7 @@ then
 	git config --global https.proxy 'http://'${http}
 	export http_proxy='http://'${http}
 	export https_proxy='http://'${http}
-	 all_proxy='socks5://'${socket}
+	export all_proxy='socks5://'${socket}
 fi
 
 #判断是否需要nomachine
@@ -60,8 +61,8 @@ sed -i 's#ZSH_THEME="robbyrussell"#ZSH_THEME="ys"#g' ~/.zshrc
 if [ y = ${proxy_flag} ];
 then
 	echo export http_proxy=http://${http} >> ~/.zshrc 
-        echo export https_proxy=https://${http} >> ~/.zshrc
-        echo export all_proxy=socket5://${socket} >> ~/.zshrc
+	echo export https_proxy=https://${http} >> ~/.zshrc
+	echo export all_proxy=socket5://${socket} >> ~/.zshrc
 fi
 
 #写入.vimrc文件
@@ -70,6 +71,7 @@ for line in ${vimrc_file}
 do
 	echo ${vimrc_file} >> ~/.vimrc
 done 
+echo "source ~/.vimrc" >> ~/.zshrc
 
 #刷新.zshrc
 source ~/.zshrc
