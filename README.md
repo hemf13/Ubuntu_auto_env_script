@@ -2,13 +2,12 @@
 Ubuntu Automatic deployment environment script.
 
 
-
 # Functional
 
-1. Intsall curl git vim net-tools cmake gcc wget htop nload 
-2. Change the proxy in shell and git
-3. Intall oh-my-zsh and plug-in (zsh_autosuggestions zsh-syntax-highlighting)
-4. Change .vimrc with vimrc.conf
+1. Install some basic softwares
+2. Change the proxy in terminal and git
+3. Install oh-my-zsh and plug-in (zsh_autosuggestions zsh-syntax-highlighting)
+4. Wget the nomachine and VScode and extract them in /tmp
 
 # How to use
 run the following command in bash shell
