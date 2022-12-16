@@ -15,6 +15,7 @@ sudo apt install -y git
 sudo apt install -y curl
 sudo apt install -y wget
 sudo apt install -y vim
+sudo apt install -y ssh
 
 # build-essential includes gcc, g++, make for C/C++ programming
 sudo apt install -y build-essential
