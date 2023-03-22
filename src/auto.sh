@@ -49,8 +49,8 @@ fi
 read -p "Do you want to install nomachine? [yes/no]: " nomachine_flag
 if [ "yes" = ${nomachine_flag} ]; 
 then 
-	wget -P /tmp https://download.nomachine.com/download/7.9/Linux/nomachine_7.9.2_1_amd64.deb
-	sudo dpkg -i /tmp/nomachine_7.9.2_1_amd64.deb
+	wget -P /tmp https://download.nomachine.com/download/8.4/Linux/nomachine_8.4.2_1_amd64.deb
+	sudo dpkg -i /tmp/nomachine_8.4.2_1_amd64.deb
 fi
 
 # 判断是否需要VSCode
